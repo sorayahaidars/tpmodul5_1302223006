@@ -1,4 +1,3 @@
-﻿using System;
 public class DataGeneric<T>
 {
     public T Data { get; set; }
@@ -15,6 +14,14 @@ public class DataGeneric<T>
 }
 
 
+public class HaloGeneric
+{
+    public void SapaUser<T>(T nama)
+    {
+        Console.WriteLine("Halo user " + nama);
+    }
+}
+
 
 internal class Program
 {
@@ -25,5 +32,8 @@ internal class Program
 
         dataGeneric.PrintData();
 
+        HaloGeneric halo = new HaloGeneric();
+        string namaPanggilan = Console.ReadLine();
+        halo.SapaUser(namaPanggilan);
     }
 }
